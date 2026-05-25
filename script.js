@@ -1,7 +1,7 @@
 const suspects = [
 {
   name: "Bianca Frost",
-  image: "assets/suspects/bianca_frost.jpg",
+  image: "./assets/suspects/bianca_frost.jpg",
   traits: [
     "Black woman",
     "Long dark wavy hair",
