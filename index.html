@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CLUEDLE</title>
 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+  <header class="topBar">
+
+    <div>
+      <h1>CLUEDLE</h1>
+      <p id="caseText">
+        A satirical luxury murder mystery.
+      </p>
+    </div>
+
+    <div class="topControls">
+      <div id="turns">5 turns left</div>
+
+      <button id="newGameBtn">
+        NEW GAME
+      </button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="category">
+      <h2>SUSPECTS</h2>
+      <div id="suspects" class="cards"></div>
+    </section>
+
+    <section class="category">
+      <h2>ROOMS</h2>
+      <div id="rooms" class="cards"></div>
+    </section>
+
+    <section class="category">
+      <h2>WEAPONS</h2>
+      <div id="weapons" class="cards"></div>
+    </section>
+
+    <button id="accuseBtn" disabled>
+      SELECT 3 CARDS
+    </button>
+
+    <section id="feedback" class="panel">
+      <h2>Case Notes</h2>
+
+      <div id="notes">
+        Select one suspect, one room and one weapon.
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
