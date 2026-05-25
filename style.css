@@ -1,1 +1,184 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
+body{
+  background:#070b11;
+  color:#f4efe3;
+  font-family:Arial, Helvetica, sans-serif;
+  min-height:100vh;
+  padding:24px;
+}
+
+#app{
+  max-width:1400px;
+  margin:auto;
+}
+
+.topBar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:28px;
+}
+
+h1{
+  font-size:48px;
+  letter-spacing:4px;
+}
+
+#caseText{
+  margin-top:8px;
+  opacity:0.7;
+}
+
+.topControls{
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+#turns{
+  background:#131b26;
+  border:1px solid #293445;
+  padding:12px 18px;
+  border-radius:14px;
+}
+
+button{
+  background:#b6924f;
+  color:#111;
+  border:none;
+  padding:14px 20px;
+  border-radius:14px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:disabled{
+  opacity:0.4;
+}
+
+.category{
+  margin-bottom:42px;
+}
+
+.category h2{
+  margin-bottom:18px;
+  letter-spacing:2px;
+}
+
+.cards{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  padding-bottom:12px;
+}
+
+.card{
+  min-width:320px;
+  background:#111923;
+  border:2px solid #2c3a4d;
+  border-radius:24px;
+  overflow:hidden;
+  position:relative;
+  transition:0.25s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card.selected{
+  border-color:#d6b46a;
+  box-shadow:0 0 24px rgba(214,180,106,0.4);
+}
+
+.card.locked{
+  border-color:#69e58d;
+  box-shadow:0 0 24px rgba(105,229,141,0.5);
+}
+
+.card.wrong::after{
+  content:"✕";
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:180px;
+  color:rgba(255,60,60,0.75);
+  font-weight:bold;
+  transform:rotate(-11deg);
+  pointer-events:none;
+}
+
+.cardImage{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  display:block;
+}
+
+.cardContent{
+  padding:20px;
+}
+
+.cardTitle{
+  font-size:32px;
+  margin-bottom:18px;
+  letter-spacing:2px;
+}
+
+.traits{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.trait{
+  background:#1a2430;
+  border:1px solid #314155;
+  border-radius:14px;
+  padding:12px;
+  text-align:center;
+  font-size:14px;
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.25s;
+}
+
+.trait.match{
+  background:#17301d;
+  border-color:#69e58d;
+}
+
+.trait.ruledOut{
+  opacity:0.28;
+  text-decoration:line-through;
+}
+
+.panel{
+  background:#111923;
+  border:2px solid #2c3a4d;
+  border-radius:24px;
+  padding:24px;
+  margin-top:32px;
+}
+
+.panel h2{
+  margin-bottom:14px;
+}
+
+.hidden{
+  display:none;
+}
+
+#shareText{
+  white-space:pre-wrap;
+  line-height:1.6;
+}
